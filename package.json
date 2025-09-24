@@ -20,6 +20,7 @@
     "@react-navigation/stack": "7.2.10",
     "@supabase/supabase-js": "2.49.9",
     "expo": "~52.0.47",
+    "firebase": "^10.7.0",
     "expo-auth-session": "6.0.3",
     "expo-av": "~15.0.2",
     "expo-camera": "~16.0.18",
