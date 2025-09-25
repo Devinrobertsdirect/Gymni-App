@@ -1,48 +1,49 @@
 {
   "expo": {
     "name": "Gymni Fitness",
-    "slug": "gymni-fitness-app",
+    "slug": "gymnifitnessapp-gymnifitness-0998c33744a3",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#000000"
+      "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "googleServicesFile": "./GoogleService-Info.plist",
       "supportsTablet": true,
-      "bundleIdentifier": "com.gymni.fitnessapp",
+      "bundleIdentifier": "com.devinrobertsdirect.gymnifitnessappgymnifitness0998c33744a3",
       "buildNumber": "5",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
         "NSCameraUsageDescription": "This app uses the camera to take photos for your fitness journey.",
         "NSPhotoLibraryUsageDescription": "This app accesses your photo library to share fitness content."
-      }
+      },
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
-      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000000"
       },
-      "package": "com.gymni.fitnessapp",
+      "package": "com.devinrobertsdirect.gymnifitnessapp",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
         "android.permission.WRITE_EXTERNAL_STORAGE"
-      ]
+      ],
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "Gymni Fitness - Your personal fitness companion with workouts, challenges, and social features",
     "extra": {
       "eas": {
-        "projectId": "15775cbb-6ec1-4f7f-aea2-2dc1987923d0"
+        "projectId": "f0a3a699-40d0-4ec3-9419-ebf24ad31493"
       }
     }
   }
