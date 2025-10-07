@@ -1,0 +1,15 @@
+# Exclude large files and directories from EAS build
+node_modules/.cache/
+node_modules/@react-native/community-cli-plugin/node_modules/@react-native/debugger-frontend/
+node_modules/expo-modules-autolinking/android/
+*.log
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+build/
+dist/

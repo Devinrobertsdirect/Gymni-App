@@ -11,17 +11,38 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "main": "index.ts",
     "assetBundlePatterns": [
-      "**/*"
+      "assets/**/*"
+    ],
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": []
+        }
+      ]
     ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.devinrobertsdirect.gymnifitnessappgymnifitness0998c33744a3",
-      "buildNumber": "5",
+      "buildNumber": "9",
+      "deviceFamily": ["1", "2"],
+      "requireFullScreen": false,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
         "NSCameraUsageDescription": "This app uses the camera to take photos for your fitness journey.",
-        "NSPhotoLibraryUsageDescription": "This app accesses your photo library to share fitness content."
+        "NSPhotoLibraryUsageDescription": "This app accesses your photo library to share fitness content.",
+        "UIDeviceFamily": [1, 2],
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true,
+          "NSExceptionDomains": {
+            "gymni-testing-1-devinrobertsdir.replit.app": {
+              "NSExceptionAllowsInsecureHTTPLoads": false,
+              "NSIncludesSubdomains": true
+            }
+          }
+        }
       },
       "googleServicesFile": "./GoogleService-Info.plist"
     },
@@ -31,6 +52,7 @@
         "backgroundColor": "#000000"
       },
       "package": "com.devinrobertsdirect.gymnifitnessapp",
+      "versionCode": 9,
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
@@ -45,6 +67,12 @@
       "eas": {
         "projectId": "f0a3a699-40d0-4ec3-9419-ebf24ad31493"
       }
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }

@@ -1,22 +1,16 @@
 {
-  "private": true,
+  "name": "gymnifitnessapp-gymnifitness-0998c33744a3",
+  "version": "1.0.0",
+  "main": "index.ts",
   "scripts": {
-    "start": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "npm run development -- --watch",
-    "watch-poll": "npm run watch -- --watch-poll",
-    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "android": "expo run:android",
-    "ios": "expo run:ios"
-  },
-  "devDependencies": {
-    "axios": "^0.19",
-    "cross-env": "^7.0",
-    "laravel-mix": "^5.0.1",
-    "lodash": "^4.17.19",
-    "resolve-url-loader": "^3.1.0"
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "prebuild": "expo prebuild",
+    "build:ios": "eas build --platform ios",
+    "build:android": "eas build --platform android",
+    "submit:ios": "eas submit --platform ios"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
@@ -26,15 +20,26 @@
     "expo": "~53.0.13",
     "expo-auth-session": "^7.0.8",
     "expo-av": "^16.0.7",
-    "expo-linear-gradient": "^14.1.5",
+    "expo-font": "~13.0.1",
+    "expo-linear-gradient": "~14.0.1",
+    "expo-splash-screen": "~0.29.17",
+    "expo-status-bar": "~2.0.0",
     "expo-web-browser": "^15.0.7",
     "firebase": "^10.7.0",
-    "react": "19.0.0",
-    "react-native": "0.79.4",
+    "react": "18.3.1",
+    "react-native": "0.76.5",
     "react-native-safe-area-context": "^5.6.1",
     "react-native-screens": "^4.16.0",
     "sonner-native": "^0.21.0"
   },
-  "name": "gymnifitnessapp-gymnifitness-0998c33744a3",
-  "version": "1.0.0"
+  "devDependencies": {
+    "@babel/core": "^7.25.0",
+    "@types/react": "~18.3.12",
+    "typescript": "^5.3.0"
+  },
+  "overrides": {
+    "react": "18.3.1",
+    "react-native": "0.76.5"
+  },
+  "private": true
 }
