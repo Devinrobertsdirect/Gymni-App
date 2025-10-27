@@ -11,7 +11,6 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "main": "index.ts",
     "assetBundlePatterns": [
       "assets/**/*"
     ],
@@ -21,19 +20,24 @@
         {
           "fonts": []
         }
-      ]
+      ],
+      "expo-updates"
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.devinrobertsdirect.gymnifitnessappgymnifitness0998c33744a3",
+            "bundleIdentifier": "com.devinrobertsdirect.gymnifitnessappgymnifitness0998c33744a3",
       "buildNumber": "9",
-      "deviceFamily": ["1", "2"],
       "requireFullScreen": false,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
         "NSCameraUsageDescription": "This app uses the camera to take photos for your fitness journey.",
         "NSPhotoLibraryUsageDescription": "This app accesses your photo library to share fitness content.",
-        "UIDeviceFamily": [1, 2],
+        "UIDeviceFamily": [
+          1,
+          2,
+          1,
+          2
+        ],
         "NSAppTransportSecurity": {
           "NSAllowsArbitraryLoads": true,
           "NSExceptionDomains": {
@@ -51,9 +55,12 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000000"
       },
-      "package": "com.devinrobertsdirect.gymnifitnessapp",
+              "package": "com.devinrobertsdirect.gymnifitnessappgymnifitness0998c33744a3",
       "versionCode": 9,
       "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
         "android.permission.WRITE_EXTERNAL_STORAGE"
@@ -69,7 +76,8 @@
       }
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/f0a3a699-40d0-4ec3-9419-ebf24ad31493"
     },
     "runtimeVersion": {
       "policy": "appVersion"

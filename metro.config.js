@@ -12,6 +12,15 @@ config.resolver.assetExts.push(
   'webp'
 );
 
+// Fix for JavaScript bundling issues
+config.resolver.platforms = ['ios', 'android', 'native', 'web'];
+config.transformer.minifierConfig = {
+  keep_fnames: true,
+  mangle: {
+    keep_fnames: true,
+  },
+};
+
 module.exports = config;
 
 

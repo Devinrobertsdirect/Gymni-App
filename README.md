@@ -134,3 +134,4 @@ For technical issues or questions, contact support through the app's Support & F
 **Built with ❤️ for fitness enthusiasts**
 
 
+

@@ -1,8 +1,8 @@
-import React from 'react';
+import 'react-native-gesture-handler';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Toaster } from 'sonner-native';
 
@@ -113,74 +113,19 @@ function RootStack() {  return (    <Stack.Navigator screenOptions={{ headerShow
   );
 }
 
-// Error Boundary for Production Crash Handling
-class ErrorBoundary extends React.Component<
-  { children: React.ReactNode },
-  { hasError: boolean; error: Error | null }
-> {
-  constructor(props: { children: React.ReactNode }) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
-
-  static getDerivedStateFromError(error: Error) {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log to error reporting service in production
-    console.error('App Error:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <View style={styles.errorContainer}>
-          <Text style={styles.errorTitle}>Oops! Something went wrong</Text>
-          <Text style={styles.errorText}>
-            We're sorry for the inconvenience. Please restart the app.
-          </Text>
-        </View>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
 export default function App() {
   return (
-    <ErrorBoundary>
-      <SafeAreaProvider style={styles.container}>
-        <NavigationContainer>
-          <Toaster />
-          <RootStack />
-        </NavigationContainer>
-      </SafeAreaProvider>
-    </ErrorBoundary>
+    <SafeAreaProvider style={styles.container}>
+      <NavigationContainer>
+        <Toaster />
+        <RootStack />
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  errorContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#fff',
-  },
-  errorTitle: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 10,
-    color: '#000',
-  },
-  errorText: {
-    fontSize: 16,
-    textAlign: 'center',
-    color: '#666',
-  },
+  }
 });
